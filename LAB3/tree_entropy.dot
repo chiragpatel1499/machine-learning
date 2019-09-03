@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="milk <= 0.5\ngini = 0.753\nsamples = 70\nvalue = [29, 14, 3, 9, 3, 6, 6]\nclass = t1", fillcolor="#e5813944"] ;
+1 [label="feathers <= 0.5\ngini = 0.782\nsamples = 41\nvalue = [0, 14, 3, 9, 3, 6, 6]\nclass = t2", fillcolor="#b7e53928"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="fins <= 0.5\ngini = 0.765\nsamples = 27\nvalue = [0, 0, 3, 9, 3, 6, 6]\nclass = t4", fillcolor="#39e5e224"] ;
+1 -> 2 ;
+3 [label="backbone <= 0.5\ngini = 0.722\nsamples = 18\nvalue = [0, 0, 3, 0, 3, 6, 6]\nclass = t6", fillcolor="#b139e500"] ;
+2 -> 3 ;
+4 [label="predator <= 0.5\ngini = 0.5\nsamples = 12\nvalue = [0, 0, 0, 0, 0, 6, 6]\nclass = t6", fillcolor="#b139e500"] ;
+3 -> 4 ;
+5 [label="legs <= 3.0\ngini = 0.245\nsamples = 7\nvalue = [0, 0, 0, 0, 0, 6, 1]\nclass = t6", fillcolor="#b139e5d4"] ;
+4 -> 5 ;
+6 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 0, 0, 0, 1]\nclass = t7", fillcolor="#e53986ff"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 6\nvalue = [0, 0, 0, 0, 0, 6, 0]\nclass = t6", fillcolor="#b139e5ff"] ;
+5 -> 7 ;
+8 [label="gini = 0.0\nsamples = 5\nvalue = [0, 0, 0, 0, 0, 0, 5]\nclass = t7", fillcolor="#e53986ff"] ;
+4 -> 8 ;
+9 [label="legs <= 2.0\ngini = 0.5\nsamples = 6\nvalue = [0, 0, 3, 0, 3, 0, 0]\nclass = t3", fillcolor="#39e54d00"] ;
+3 -> 9 ;
+10 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 3, 0, 0, 0, 0]\nclass = t3", fillcolor="#39e54dff"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 3, 0, 0]\nclass = t5", fillcolor="#3956e5ff"] ;
+9 -> 11 ;
+12 [label="gini = 0.0\nsamples = 9\nvalue = [0, 0, 0, 9, 0, 0, 0]\nclass = t4", fillcolor="#39e5e2ff"] ;
+2 -> 12 ;
+13 [label="gini = 0.0\nsamples = 14\nvalue = [0, 14, 0, 0, 0, 0, 0]\nclass = t2", fillcolor="#b7e539ff"] ;
+1 -> 13 ;
+14 [label="gini = 0.0\nsamples = 29\nvalue = [29, 0, 0, 0, 0, 0, 0]\nclass = t1", fillcolor="#e58139ff"] ;
+0 -> 14 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
